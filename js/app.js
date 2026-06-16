@@ -141,17 +141,19 @@
   const TIMELINE = {
     cz: [
       { year: '2011', text: 'První webové vizuály a loga — projekt Výuka jazyků (Photoshop).' },
-      { year: '2019', text: 'Film pro Siemens Global Hackathon — 1. místo. Grafika pro WopiHost (Hacktoberfest).' },
-      { year: '2023', text: 'Kurzy kresby a malby v Ateliéru Mozaika.' },
-      { year: '2023', text: 'Kávová sbírka v NetSuite — video a plakáty z vlastní iniciativy.' },
+      { year: '2019', text: 'Film pro Siemens Global Hackathon — 1. místo.' },
+      { year: '2023', text: 'Absolvovala 7 vícedenních kurzů kresby a malby v Ateliéru Mozaika.' },
+      { year: '2023', text: 'Kávová sbírka v NetSuite — video a plakáty.' },
+      { year: '2025', text: 'Mentorka kurzů akrylové malby v NetSuite.' },
       { year: '2025', text: 'Kurz Procreate (SKVOT) · Typo konference Brno.' },
       { year: '2026', text: 'Naplno se vydávám za grafickým designem.' }
     ],
     en: [
       { year: '2011', text: 'First web visuals and logos — the Výuka jazyků project (Photoshop).' },
-      { year: '2019', text: 'Film for the Siemens Global Hackathon — 1st prize. Graphics for WopiHost (Hacktoberfest).' },
-      { year: '2023', text: 'Drawing & painting courses at Ateliér Mozaika.' },
-      { year: '2023', text: 'Coffee fundraiser at NetSuite — self-started video and posters.' },
+      { year: '2019', text: 'Film for the Siemens Global Hackathon — 1st prize.' },
+      { year: '2023', text: 'Completed 7 multi-day drawing & painting courses at Ateliér Mozaika.' },
+      { year: '2023', text: 'Coffee fundraiser at NetSuite — video and posters.' },
+      { year: '2025', text: 'Mentored acrylic-painting courses at NetSuite.' },
       { year: '2025', text: 'Procreate course (SKVOT) · Typo conference, Brno.' },
       { year: '2026', text: 'Going all in on graphic design.' }
     ]
@@ -203,7 +205,7 @@
       `<button class="nav__link${view === key ? ' is-active' : ''}" data-go="${target}">${esc(label)}</button>`;
     return `<nav class="nav">
       <button class="nav__brand" data-go="#/">
-        <span>L.K.</span><span class="sep">//</span><span class="alias">DVOJITY&nbsp;WENDY</span>
+        <span>L.K.</span><span class="sep">//</span><span class="alias">DVOJITYWENDY</span>
       </button>
       <div class="nav__links">
         ${link('#/work', t.nav_work, 'work')}
