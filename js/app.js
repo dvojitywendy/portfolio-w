@@ -96,7 +96,7 @@
   const STR = {
     cz: {
       nav_work: 'Práce', nav_about: 'O mně', nav_contact: 'Kontakt', langLabel: 'EN',
-      kicker: 'Grafička · Brno', tagline: 'Kreativní duše, která přebírá tělo automatizační testerky.',
+      kicker: 'Grafička · Brno', tagline: 'Kreativní duše, která přepisuje tělo automatizační testerky.',
       hero_caption: 'The Spark — koi kapři, 2025', cta_work: 'Prohlédnout práce', cta_story: 'Můj příběh',
       beats: ["Můj životopis říká „softwarová inženýrka.“", "Mezi řádky ale najdete člověka, pro kterého grafika nikdy nebyla jen na okraji stránky."],
       punch: 'Teď ji zarovnávám do středu.',
@@ -117,7 +117,7 @@
     },
     en: {
       nav_work: 'Work', nav_about: 'About', nav_contact: 'Contact', langLabel: 'CZ',
-      kicker: 'Graphic Designer · Brno', tagline: "A creative soul overtaking the body of a test automation engineer.",
+      kicker: 'Graphic Designer · Brno', tagline: "A creative soul rewriting the body of a test automation engineer.",
       hero_caption: 'The Spark — koi carps, 2025', cta_work: 'See the work', cta_story: 'My story',
       beats: ["My résumé says “software engineer.”", "But between the lines you'll find someone for whom graphics were never just a note in the margin."],
       punch: "Now I'm aligning it to the center.",
