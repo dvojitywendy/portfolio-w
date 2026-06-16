@@ -98,8 +98,8 @@
       nav_work: 'Práce', nav_about: 'O mně', nav_contact: 'Kontakt', langLabel: 'EN',
       kicker: 'Grafička · Brno', tagline: 'Kreativní duše, která přebírá tělo automatizační testerky.',
       hero_caption: 'The Spark — koi kapři, 2025', cta_work: 'Prohlédnout práce', cta_story: 'Můj příběh',
-      beats: ["Můj životopis říká „softwarová inženýrka.“", "Podívejte se blíž. Uvidíte něco jiného —", "— člověka, který nikdy nepřestal kreslit."],
-      punch: 'Teď tu energii dávám tam, kam patřila od začátku.',
+      beats: ["Můj životopis říká „softwarová inženýrka.“", "Mezi řádky ale najdete člověka, pro kterého grafika nikdy nebyla jen na okraji stránky."],
+      punch: 'Teď ji zarovnávám do středu.',
       featured: 'Vybrané', all_work: 'Všechny práce',
       work_title: 'Práce', view_project: 'Otevřít projekt', back: 'Zpět na práce', prev: 'Předchozí', next: 'Další',
       play: 'Přehrát film',
@@ -119,8 +119,8 @@
       nav_work: 'Work', nav_about: 'About', nav_contact: 'Contact', langLabel: 'CZ',
       kicker: 'Graphic Designer · Brno', tagline: "A creative soul overtaking the body of a test automation engineer.",
       hero_caption: 'The Spark — koi carps, 2025', cta_work: 'See the work', cta_story: 'My story',
-      beats: ["My résumé says “software engineer.”", "Look closer. You'll see something else —", "— someone who never stopped drawing."],
-      punch: "Now I'm putting that energy where it belonged from the start.",
+      beats: ["My résumé says “software engineer.”", "But between the lines you'll find someone for whom graphics were never just a note in the margin."],
+      punch: "Now I'm aligning it to the center.",
       featured: 'Featured', all_work: 'All work',
       work_title: 'The Work', view_project: 'Open project', back: 'Back to work', prev: 'Previous', next: 'Next',
       play: 'Play the film',
@@ -179,6 +179,28 @@
   const esc = (s) => String(s == null ? '' : s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
+  // Czech typography: never leave a single-letter preposition/conjunction
+  // (k o s u v z a i) dangling at the end of a line — bind it to the next
+  // word with a non-breaking space. CZ only; no-op for EN.
+  function czFix(s) {
+    if (typeof s !== 'string' || state.lang !== 'cz') return s;
+    const re = /(^|[\s(„"'])([KkSsVvZzOoUuAaIi])[ \t]+/g;
+    let prev;
+    do { prev = s; s = s.replace(re, '$1$2 '); } while (s !== prev);
+    return s;
+  }
+  // escape + Czech non-breaking-space fix, for visible prose
+  const txt = (s) => esc(czFix(s));
+  // localize STR for the current language, with czFix applied to every string
+  function localize(lang) {
+    const src = STR[lang];
+    if (lang !== 'cz') return src;
+    const map = (v) => Array.isArray(v) ? v.map(map) : (typeof v === 'string' ? czFix(v) : v);
+    const out = {};
+    for (const k in src) out[k] = map(src[k]);
+    return out;
+  }
 
   let state = {
     lang: (function () { try { return localStorage.getItem('lk_lang') || 'cz'; } catch (e) { return 'cz'; } })(),
@@ -274,7 +296,7 @@
         <div class="row__body">
           <div class="row__meta">${esc(p.year)} — ${esc(p.medium[state.lang])}</div>
           <h2>${esc(p.title[state.lang])}</h2>
-          <p class="row__desc">${esc(p.desc[state.lang])}</p>
+          <p class="row__desc">${txt(p.desc[state.lang])}</p>
           <span class="row__cta">${esc(t.view_project)} →</span>
         </div>
       </button>`).join('');
@@ -299,7 +321,7 @@
       videoBlock = `<div class="video" data-video-src="${esc(p.video.src)}" data-video-poster="${esc(p.video.poster)}" role="button" tabindex="0" aria-label="${esc(p.video.title[lang])}">
           ${posterImg}
           <div class="video__overlay">
-            <div class="video__title">${esc(p.video.title[lang])}</div>
+            <div class="video__title">${txt(p.video.title[lang])}</div>
             <span class="video__play">▶ ${esc(t.play)}</span>
           </div>
           <span class="video__ratio" aria-hidden="true"></span>
@@ -321,7 +343,7 @@
       <div class="project__head">
         <div class="project__meta">${esc(p.year)} — ${esc(p.medium[lang])}</div>
         <h1>${esc(p.title[lang])}</h1>
-        <p class="project__desc">${esc(p.desc[lang])}</p>
+        <p class="project__desc">${txt(p.desc[lang])}</p>
       </div>
       ${videoBlock}
       ${gallery}
@@ -364,7 +386,7 @@
         <div class="timeline__rail">
           ${TIMELINE[lang].map((r) => `<div class="timeline__row">
             <div class="timeline__year">${esc(r.year)}</div>
-            <div class="timeline__text">${esc(r.text)}</div>
+            <div class="timeline__text">${txt(r.text)}</div>
           </div>`).join('')}
         </div>
       </div>
@@ -418,7 +440,7 @@
   const app = () => document.getElementById('app');
 
   function render() {
-    const t = STR[state.lang];
+    const t = localize(state.lang);
     const r = route();
     const p = (r.view === 'p') ? DATA.find((x) => x.slug === r.slug) : null;
 

@@ -189,7 +189,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 /* ===================== CONTACT (quiet / gallery layout) ===================== */
 .contact{min-height:88vh;padding:140px clamp(16px,4vw,60px) 90px;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,7vw,110px);align-items:start}
-.contact__head{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,52px);line-height:1.05;letter-spacing:-.5px;max-width:14ch}
+.contact__head{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(34px,5vw,72px);line-height:1.15;max-width:14ch}
 .contact__loc{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--smoke);margin-top:34px;display:flex;align-items:center;gap:10px}
 .contact__dot{width:7px;height:7px;background:var(--red);border-radius:50%;display:inline-block;flex-shrink:0}
 .contacts{display:flex;flex-direction:column}
