@@ -273,6 +273,7 @@
       </section>
 
       <section class="narrative">
+        <div class="narrative__mark" aria-hidden="true">\u{1F78B}</div>
         <div class="narrative__inner">
           ${t.beats.map((b) => `<div class="beat">${esc(b)}</div>`).join('')}
           <p class="punch">${esc(t.punch)}</p>
