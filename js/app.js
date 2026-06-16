@@ -42,7 +42,7 @@
         { f: 'assets/coffee-fundraiser/04.png', cap: null },
         { f: 'assets/coffee-fundraiser/05.png', cap: null }
       ],
-      cover: 'assets/coffee-fundraiser/02.png',
+      cover: 'assets/coffee-fundraiser/04.png',
       video: { src: 'assets/coffee-fundraiser/video.mp4', poster: 'assets/coffee-fundraiser/01.png', title: { en: 'The Campaign Film', cz: 'Film kampaně' } }
     },
     {
