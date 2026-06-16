@@ -88,8 +88,8 @@
         cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2019: veškeré natáčení, střih v Premiere Pro, část scénáře. Ukazoval, jak může AI v Polarion ALM pomoct — a vtipně selhat. Film i tým získali 1. místo."
       },
       images: [],
-      cover: 'assets/coffee-fundraiser/04.png',
-      video: { src: 'assets/global-hackathon-2019/video.mp4', poster: '', title: { en: '1st Prize · AI in Polarion ALM', cz: '1. místo · AI v Polarion ALM' } }
+      cover: 'assets/global-hackathon-2019/cover.jpg',
+      video: { src: 'assets/global-hackathon-2019/video.mp4', poster: 'assets/global-hackathon-2019/cover.jpg', title: { en: '1st Prize · AI in Polarion ALM', cz: '1. místo · AI v Polarion ALM' } }
     }
   ];
 
