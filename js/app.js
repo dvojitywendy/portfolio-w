@@ -273,7 +273,13 @@
       </section>
 
       <section class="narrative">
-        <div class="narrative__mark" aria-hidden="true">\u{1F78B}</div>
+        <svg class="narrative__mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="50" cy="50" r="35.5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="50" cy="50" r="23" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="50" cy="50" r="10.5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="50" cy="50" r="3.2" fill="currentColor"/>
+        </svg>
         <div class="narrative__inner">
           ${t.beats.map((b) => `<div class="beat">${esc(b)}</div>`).join('')}
           <p class="punch">${esc(t.punch)}</p>
