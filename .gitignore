@@ -1,6 +1,19 @@
 # Claude Code local settings (machine-specific)
 .claude/settings.local.json
 
+# Personal/private source material — never publish to the public site repo
+_private/
+
+# Claude Design handoff bundle (local working artifact; ~94MB, not part of the site)
+design/
+
+# Scraped source MASTERS (large originals incl. the raw 135MB video).
+# The web-optimized copies the site actually uses live in /assets/.
+scrape/assets/
+
+# Personal source photos — only the curated crop (assets/portrait.jpg) is public.
+scrape/photos/
+
 # Dependencies
 node_modules/
 
