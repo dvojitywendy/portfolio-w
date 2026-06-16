@@ -112,7 +112,7 @@
       ],
       about_quip: 'Žádný grafický program si přede mnou není jistý.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Nástroje', journey: 'Cesta',
-      contact_kicker: 'Kontakt', contact_head: 'Pojďme udělat něco hlasitého.',
+      contact_kicker: 'Kontakt', contact_head: 'Pojďme udělat něco hlasitého.', contact_loc: 'Brno, Česká republika',
       close: 'Zavřít', footer: 'Vytvořeno s láskou · 2026'
     },
     en: {
@@ -133,7 +133,7 @@
       ],
       about_quip: 'No graphics tool is safe around me.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Toolkit', journey: 'The Journey',
-      contact_kicker: 'Contact', contact_head: "Let's make something loud.",
+      contact_kicker: 'Contact', contact_head: "Let's make something loud.", contact_loc: 'Brno, Czech Republic',
       close: 'Close', footer: 'Made with love · 2026'
     }
   };
@@ -379,14 +379,18 @@
   function contactHtml(t) {
     const rows = contacts(state.lang).map((c) => `
       <a class="contact-row" href="${esc(c.href)}"${/^https?:/.test(c.href) ? ' target="_blank" rel="noopener"' : ''}>
-        <span class="contact-row__label">${esc(c.label)}</span>
-        <span class="contact-row__value">${esc(c.value)}</span>
+        <span class="contact-row__text">
+          <span class="contact-row__label">${esc(c.label)}</span>
+          <span class="contact-row__value">${esc(c.value)}</span>
+        </span>
         <span class="contact-row__arrow">↗</span>
       </a>`).join('');
     return `<main class="contact view">
-      <div class="kicker">${esc(t.contact_kicker)}</div>
-      <h1 class="contact__head">${esc(t.contact_head)}</h1>
-      <div class="contact__slash slash"></div>
+      <div>
+        <div class="kicker">${esc(t.contact_kicker)}</div>
+        <h1 class="contact__head">${esc(t.contact_head)}</h1>
+        <div class="contact__loc"><span class="contact__dot"></span>${esc(t.contact_loc)}</div>
+      </div>
       <div class="contacts">${rows}</div>
     </main>`;
   }

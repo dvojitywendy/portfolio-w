@@ -187,17 +187,18 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .timeline__text{font-size:clamp(15px,1.4vw,18px);line-height:1.5;color:var(--paper)}
 .about__cta{margin-top:clamp(48px,7vw,90px);display:flex;gap:14px;flex-wrap:wrap}
 
-/* ===================== CONTACT ===================== */
-.contact{min-height:88vh;padding:130px clamp(16px,4vw,60px) 90px}
-.contact__head{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(42px,9vw,150px);line-height:.92;padding-bottom:.06em;max-width:16ch}
-.contact__slash{width:min(440px,70%);margin:34px 0 44px}
-.contacts{display:flex;flex-direction:column;border-top:2px solid var(--ash)}
-.contact-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:clamp(16px,2.4vw,30px) 4px;border-bottom:2px solid var(--ash);transition:background .15s,padding .15s}
-.contact-row:hover{background:var(--red);padding-left:18px;padding-right:18px}
-.contact-row__label{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);min-width:120px}
-.contact-row:hover .contact-row__label{color:#fff}
-.contact-row__value{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(22px,3.6vw,52px);line-height:1;flex:1}
-.contact-row__arrow{font-family:'Space Mono',monospace;font-size:18px}
+/* ===================== CONTACT (quiet / gallery layout) ===================== */
+.contact{min-height:88vh;padding:140px clamp(16px,4vw,60px) 90px;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,7vw,110px);align-items:start}
+.contact__head{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,52px);line-height:1.05;letter-spacing:-.5px;max-width:14ch}
+.contact__loc{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--smoke);margin-top:34px;display:flex;align-items:center;gap:10px}
+.contact__dot{width:7px;height:7px;background:var(--red);border-radius:50%;display:inline-block;flex-shrink:0}
+.contacts{display:flex;flex-direction:column}
+.contact-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;border-bottom:1px solid var(--ash);transition:border-color .3s ease,padding .3s ease}
+.contact-row:hover{border-color:var(--red);padding-left:10px}
+.contact-row__text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.contact-row__label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--smoke)}
+.contact-row__value{font-family:'Archivo',sans-serif;font-weight:600;font-size:clamp(17px,1.7vw,22px);letter-spacing:-.2px;color:var(--paper);overflow-wrap:anywhere}
+.contact-row__arrow{font-family:'Space Mono',monospace;font-size:14px;color:var(--red);flex-shrink:0}
 
 /* ===================== FOOTER ===================== */
 .footer{border-top:2px solid var(--red);padding:26px clamp(16px,4vw,60px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--smoke)}
@@ -220,13 +221,13 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .row__media img{min-height:0;height:280px}
   .about__top{grid-template-columns:1fr}
   .about__top .portrait{max-width:380px}
+  .contact{grid-template-columns:1fr;gap:36px}
 }
 @media (max-width:560px){
   .nav__brand .alias{display:none}
   .grid3{grid-template-columns:1fr}
   .gallery{columns:1}
   .timeline__row{grid-template-columns:64px 1fr;gap:12px}
-  .contact-row__value{font-size:clamp(20px,7vw,34px)}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -248,5 +249,4 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .project__head h1,
 .video__title,
 .about__head,
-.about__section h2,
-.contact__head{line-height:1.15}
+.about__section h2{line-height:1.15}
