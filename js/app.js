@@ -412,6 +412,7 @@
         <div class="kicker">${esc(t.contact_kicker)}</div>
         <h1 class="contact__head">${esc(t.contact_head)}</h1>
         <div class="contact__loc"><span class="contact__dot"></span>${esc(t.contact_loc)}</div>
+        <div class="contact__sign"><span class="contact__sign-mark">Ink.</span> Ludmila Kellerová</div>
       </div>
       <div class="contacts">${rows}</div>
     </main>`;

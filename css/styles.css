@@ -192,6 +192,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .contact__head{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(34px,5vw,72px);line-height:1.15;max-width:14ch}
 .contact__loc{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--smoke);margin-top:34px;display:flex;align-items:center;gap:10px}
 .contact__dot{width:7px;height:7px;background:var(--red);border-radius:50%;display:inline-block;flex-shrink:0}
+.contact__sign{font-family:'Space Mono',monospace;font-size:clamp(14px,1.3vw,17px);letter-spacing:.5px;color:var(--paper);margin-top:30px}
+.contact__sign-mark{color:var(--red)}
 .contacts{display:flex;flex-direction:column}
 .contact-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;border-bottom:1px solid var(--ash);transition:border-color .3s ease,padding .3s ease}
 .contact-row:hover{border-color:var(--red);padding-left:10px}
