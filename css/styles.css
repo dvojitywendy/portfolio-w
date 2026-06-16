@@ -233,3 +233,20 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   *{animation:none !important}
   html{scroll-behavior:auto}
 }
+
+/* ===================== HEADING LINE-HEIGHT ===================== */
+/* The all-caps Anton headings were set < 1, which made stacked Czech
+   diacritics (Í Ě Ý Ž Š Ů Ř) from one line collide with the line above.
+   Relax to a still-compact value that clears the accents.
+   NOTE: the hero "Ludmila Kellerová" (.hero__title) is intentionally left at
+   its tighter line-height — that one looks great as-is. */
+.punch,
+.featured__head h2,
+.card__title,
+.work__head h1,
+.row__body h2,
+.project__head h1,
+.video__title,
+.about__head,
+.about__section h2,
+.contact__head{line-height:1.06}
