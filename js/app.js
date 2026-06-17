@@ -68,8 +68,8 @@
       medium: { en: 'Adobe Photoshop · CSS · Web Visuals', cz: 'Adobe Photoshop · CSS · Webové vizuály' },
       title: { en: 'Výuka jazyků', cz: 'Výuka jazyků' },
       desc: {
-        en: "In the beginning there was a book. In that book, an image — and that image became the whole website that I created CSS styles for. The logos' designs and all the web visuals done in Adobe Photoshop, 2011.",
-        cz: "Na počátku byla kniha. V té knize byl obrázek, a ten obrázek se stal celým webem, ke kterému jsem tvořila CSS styly. Návrhy na loga a všechny webové vizuály v Adobe Photoshop, 2011."
+        en: "In the beginning there was a book. In that book, an image — and that image became the whole website that I created CSS styles for. The logos' designs and all the web visuals done in Adobe Photoshop.",
+        cz: "Na počátku byla kniha. V té knize byl obrázek, a ten obrázek se stal celým webem, ke kterému jsem tvořila CSS styly. Návrhy na loga a všechny webové vizuály v Adobe Photoshop."
       },
       images: [
         { f: 'assets/web-vyuka-jazyku/02.png', cap: { en: 'Výuka jazyků — CSS and web visual elements, 2011', cz: 'Výuka jazyků — CSS a webové vizuály, 2011' } },
@@ -106,9 +106,9 @@
       video_note: 'Video se přehraje, jakmile bude soubor /assets/.../video.mp4 nahrán na GitHub Pages.',
       about_kicker: 'O mně', about_head: 'Kreativní duše v těle inženýrky.',
       aboutParas: [
-        "Dvanáct let můj titul zněl „testerka automatizace“. Grafika ale nikdy nebyla koníček na okraji — byla přirozenou součástí každé práce, které jsem se chopila.",
-        "V NetSuite jsem z vlastní iniciativy stála za kávovou sbírkou — natočila video a navrhla plakáty. U Siemensu jsem měla na starosti video a prezentační grafiku pro globální hackathon. Během sabbaticalu jsem stříhala video, tvořila z papíru a dělala grafiku pro open-source.",
-        "S Photoshopem pracuji řadu let, edituju v Premiere Pro a žádný grafický program si přede mnou není jistý — když mě něco chytne, zapnu hyperfocus a jdu do hloubky. V roce 2023 jsem absolvovala Ateliér Mozaika, v 2025 kurz Procreate a zavítala na brněnskou Typo konferenci."
+        "Dvanáct let můj titul zněl „testerka s automatizací / inženýrka zajištění kvality“. Grafika ale nikdy nebyla koníček na okraji — byla přirozenou součástí každé práce, které jsem se chopila.",
+        "V NetSuite jsem z vlastní iniciativy stála za fundraiserem za lepší kávu v office — sestříhala video a navrhla plakáty. U Siemensu jsem měla možnost natočit video v rámci globálního hackathonu. Během sabbaticalu jsem tvořila z papíru a dělala grafiku pro open-source projekt.",
+        "S Photoshopem pracuji řadu let, editovala jsem v Premiere Pro a žádný grafický program si přede mnou není jistý — když mě něco chytne, zapnu hyperfocus a jdu do hloubky. V roce 2023 jsem absolvovala kurzy v Ateliéru Mozaika, v roce 2024 kurz Midjourney prakticky, v roce 2025 kurz Procreate a zavítala jsem i na brněnskou Brno Bold Typo konferenci. Ve volném čase se kromě kresby a malby věnuji také kaligrafii."
       ],
       about_quip: 'Žádný grafický program si přede mnou není jistý.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Nástroje', journey: 'Cesta',
@@ -127,9 +127,9 @@
       video_note: 'The film will play once /assets/.../video.mp4 is committed to GitHub Pages.',
       about_kicker: 'About', about_head: "Creative soul, engineer's body.",
       aboutParas: [
-        "For twelve years my title said “test automation engineer.” But graphics were never a hobby on the side — they were part of every job I took on.",
-        "At NetSuite I founded a coffee fundraiser and made its video and posters. At Siemens I ran the video and presentation graphics for the global hackathon. On my sabbatical I cut film, crafted paper, and made graphics for open-source.",
-        "I've worked in Photoshop for years, edit in Premiere Pro, and no graphics tool is safe around me — when something grabs me, I switch on hyperfocus and go deep. In 2023 I took courses at Ateliér Mozaika, in 2025 a Procreate course, and went to the Typo conference in Brno."
+        "For twelve years my title said “test automation engineer / quality assurance.” But graphics were never a hobby on the side — they were part of every job I took on.",
+        "At NetSuite I founded a coffee fundraiser and made its campaign video and posters. At Siemens I had an opportunity to shoot and edit video entry for the global hackathon. On my sabbatical I crafted paper, and made graphics for an open-source project.",
+        "I've worked in Photoshop for years, edited in Premiere Pro, and no graphics tool is safe around me — when something grabs me, I switch on hyperfocus and go deep. In 2023 I took courses at Ateliér Mozaika, in 2024 Midjourney in practice course, in 2025 a Procreate course, and went to the Brno Bold Typo conference. In my spare time I love drawing, painting and practicing calligraphy."
       ],
       about_quip: 'No graphics tool is safe around me.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Toolkit', journey: 'The Journey',
