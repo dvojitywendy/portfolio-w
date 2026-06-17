@@ -11,14 +11,14 @@
   const DATA = [
     {
       slug: 'the-spark', folder: 'the-spark', year: '2025',
-      medium: { en: 'Procreate · Digital Painting', cz: 'Procreate · Digitální malba' },
+      medium: { en: 'Procreate for iPad · Digital Painting', cz: 'Procreate for iPad · Digitální malba' },
       title: { en: 'The Spark', cz: 'Jiskra' },
       desc: {
-        en: "Homework from the Procreate course by SKVOT Czech, April 2025 — the spark that lit everything. It builds to the koi carps: my first real digital painting.",
-        cz: "Domácí úkoly z kurzu Procreate od SKVOT Czech, duben 2025 — jiskra, která zažehla všechno ostatní. Vrcholí koi kapry: moje první opravdová digitální malba."
+        en: "Homework from the Procreate course by SKVOT Czech, April 2025 — the spark that lit all my work in Procreate. The final project: The koi carps - my first real digital painting.",
+        cz: "Domácí úkoly z kurzu Procreate od SKVOT Czech, duben 2025 — jiskra, která zažehla moji práci v Procreate. Finální projekt kurzu: Koi kapři - moje první opravdová digitální malba."
       },
       images: [
-        { f: 'assets/the-spark/01.png', cap: { en: 'Procreate course · SKVOT, 04/2025', cz: 'Kurz Procreate · SKVOT, 04/2025' } },
+        { f: 'assets/the-spark/01.png', cap: null },
         { f: 'assets/the-spark/03.png', cap: null },
         { f: 'assets/the-spark/02.png', cap: null },
         { f: 'assets/the-spark/06.png', cap: null },
@@ -29,11 +29,11 @@
     },
     {
       slug: 'coffee-fundraiser', folder: 'coffee-fundraiser', year: '2023',
-      medium: { en: 'Campaign · Poster & Film', cz: 'Kampaň · Plakát & film' },
-      title: { en: 'Coffee Fundraiser', cz: 'Kávová sbírka' },
+      medium: { en: 'Pixlr · MS Clickchamp · Poster & Film', cz: 'Pixlr · MS Clickchamp · Plakát & film' },
+      title: { en: 'Office Coffee Fundraiser', cz: 'Kávová sbírka' },
       desc: {
-        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution. I shot and cut the video (free + AI-generated footage) and designed the posters. The Intelligentsia logo is the partner brand's; used internally, non-commercially.",
-        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce. Natočila a sestříhala jsem video (volné + AI sekvence) a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito interně, nekomerčně."
+        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution. I edited the video and designed the posters. The Intelligentsia logo is the partner brand's; used only internally, non-commercially. For the video creation I used free video sequences and combined them with AI generated sequences in HeyGen. Video editing tool - MS Clickchamp, the rest of graphic work was done using Pixlr.",
+        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce. Sestříhala jsem video a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito pouze interně, nekomerčně. Pro tvrobu videa jsem použila volně dostupné video sekvence a AI generované video v HeyGen. Nástroj pro video editaci - MS Clickchamp, na zbylé grafické práce jsem použila Pixlr."
       },
       images: [
         { f: 'assets/coffee-fundraiser/01.png', cap: null },
@@ -43,15 +43,15 @@
         { f: 'assets/coffee-fundraiser/05.png', cap: null }
       ],
       cover: 'assets/coffee-fundraiser/04.png',
-      video: { src: 'assets/coffee-fundraiser/video.mp4', poster: 'assets/coffee-fundraiser/01.png', title: { en: 'The Campaign Film', cz: 'Film kampaně' } }
+      video: { src: 'assets/coffee-fundraiser/video.mp4', poster: 'assets/coffee-fundraiser/01.png', title: { en: 'The Campaign Video', cz: 'Video kampaně' } }
     },
     {
       slug: 'drawing-paintings', folder: 'drawing-paintings', year: '2021–25',
-      medium: { en: 'Pencil · Acrylic · Ink · Watercolour', cz: 'Tužka · Akryl · Tuš · Akvarel' },
+      medium: { en: 'Paper · Pencil · Acrylic · Ink · Watercolour', cz: 'Papír · Tužka · Akryl · Tuš · Akvarel' },
       title: { en: 'Drawing & Paintings', cz: 'Kresby & malby' },
       desc: {
-        en: "I love paper. These are the drawings and paintings I make for myself and in courses at Ateliér Mozaika — pencil, coloured pencil, acrylic, ink and watercolour.",
-        cz: "Miluju papír. Tohle jsou kresby a malby, které dělám pro sebe a v kurzech Ateliéru Mozaika — tužka, pastelky, akryl, tuš a akvarel."
+        en: "I love paper as a physical medium hence I create also drawings and paintings. Some of these were done in courses at Ateliér Mozaika and during my free time. Used media:pencil, coloured pencil, acrylic, ink and watercolour.",
+        cz: "Miluju papír jako fyzické médium, a proto tvořím i kresby a malby. Tohle jsou některé výstupy z kurzů Ateliéru Mozaika a mých volnočasových aktivit. Použitá média: tužka, pastelky, akryl, tuš a akvarel."
       },
       images: [
         { f: 'assets/drawing-paintings/01.jpg', cap: null }, { f: 'assets/drawing-paintings/03.png', cap: null },
@@ -65,14 +65,14 @@
     },
     {
       slug: 'web-vyuka-jazyku', folder: 'web-vyuka-jazyku', year: '2011',
-      medium: { en: 'Photoshop · Web Visuals', cz: 'Photoshop · Webové vizuály' },
+      medium: { en: 'Adobe Photoshop · CSS · Web Visuals', cz: 'Adobe Photoshop · CSS · Webové vizuály' },
       title: { en: 'Výuka jazyků', cz: 'Výuka jazyků' },
       desc: {
-        en: "In the beginning there was a book. In that book, an image — and that image became the whole website. Three logos and all the web visuals, in Photoshop, 2011. And yes, the mascot says “Whazza, folks?”",
-        cz: "Na počátku byla kniha. V té knize obrázek — a ten obrázek se stal celým webem. Tři loga a všechny webové vizuály, ve Photoshopu, 2011. A ano, maskot říká „Whazza, folks?“"
+        en: "In the beginning there was a book. In that book, an image — and that image became the whole website that I created CSS styles for. The logos' designs and all the web visuals done in Adobe Photoshop, 2011.",
+        cz: "Na počátku byla kniha. V té knize byl obrázek, a ten obrázek se stal celým webem, ke kterému jsem tvořila CSS styly. Návrhy na loga a všechny webové vizuály v Adobe Photoshop, 2011."
       },
       images: [
-        { f: 'assets/web-vyuka-jazyku/02.png', cap: { en: 'Výuka jazyků — web visuals, 2011', cz: 'Výuka jazyků — webové vizuály, 2011' } },
+        { f: 'assets/web-vyuka-jazyku/02.png', cap: { en: 'Výuka jazyků — CSS and web visual elements, 2011', cz: 'Výuka jazyků — CSS a webové vizuály, 2011' } },
         { f: 'assets/web-vyuka-jazyku/03.png', cap: null },
         { f: 'assets/web-vyuka-jazyku/04.png', cap: null },
         { f: 'assets/web-vyuka-jazyku/01.png', cap: null }
@@ -80,16 +80,16 @@
       cover: 'assets/web-vyuka-jazyku/02.png', video: null
     },
     {
-      slug: 'global-hackathon', folder: 'global-hackathon-2019', year: '2019',
-      medium: { en: 'Film · Premiere Pro', cz: 'Film · Premiere Pro' },
-      title: { en: 'Hackathon Film', cz: 'Film z hackathonu' },
+      slug: 'global-hackathon', folder: 'global-hackathon-2017', year: '2017',
+      medium: { en: 'Adobe Premiere Pro · Movie', cz: 'Adobe Premiere Pro · Film' },
+      title: { en: 'Hackathon Movie', cz: 'Film pro Hackathon' },
       desc: {
-        en: "I made the film for our team at the Siemens Global Hackathon 2019: all the shooting, the edit in Premiere Pro, part of the script. It showed how AI could help — and hilariously fail — inside Polarion ALM. The film, and the team, took 1st prize.",
-        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2019: veškeré natáčení, střih v Premiere Pro, část scénáře. Ukazoval, jak může AI v Polarion ALM pomoct — a vtipně selhat. Film i tým získali 1. místo."
+        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Premiere Pro, partially I touched up the script. The goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
+        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih v Adobe Premiere Pro, částečně jsem upravila i scénář. Cílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
       },
       images: [],
       cover: 'assets/global-hackathon-2019/cover.jpg',
-      video: { src: 'assets/global-hackathon-2019/video.mp4', poster: 'assets/global-hackathon-2019/cover.jpg', title: { en: '1st Prize · AI in Polarion ALM', cz: '1. místo · AI v Polarion ALM' } }
+      video: { src: 'assets/global-hackathon-2019/video.mp4', poster: 'assets/global-hackathon-2019/cover.jpg', title: { en: 'Global Hackathon 2017 · AI in Polarion ALM', cz: 'Global Hackathon 2017 · AI v Polarion ALM' } }
     }
   ];
 
