@@ -81,11 +81,11 @@
     },
     {
       slug: 'global-hackathon', folder: 'global-hackathon-2017', year: '2017',
-      medium: { en: 'Adobe Premiere Pro · Movie', cz: 'Adobe Premiere Pro · Film' },
+      medium: { en: 'Final Cut Pro · Movie', cz: 'Final Cut Pro · Film' },
       title: { en: 'Hackathon Movie', cz: 'Film pro Hackathon' },
       desc: {
-        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Premiere Pro, partially I touched up the script. The goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
-        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih v Adobe Premiere Pro, částečně jsem upravila i scénář. Cílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
+        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Final Cut Pro, partially I touched up the script. The goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
+        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih ve Final Cut Pro, částečně jsem upravila i scénář. Cílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
       },
       images: [],
       cover: 'assets/global-hackathon-2019/cover.jpg',
@@ -108,7 +108,7 @@
       aboutParas: [
         "Dvanáct let můj titul zněl „testerka s automatizací / inženýrka zajištění kvality“. Grafika ale nikdy nebyla koníček na okraji — byla přirozenou součástí každé práce, které jsem se chopila.",
         "V NetSuite jsem z vlastní iniciativy stála za fundraiserem za lepší kávu v office — sestříhala video a navrhla plakáty. U Siemensu jsem měla možnost natočit video v rámci globálního hackathonu. Během sabbaticalu jsem tvořila z papíru a dělala grafiku pro open-source projekt.",
-        "S Photoshopem pracuji řadu let, editovala jsem v Premiere Pro a žádný grafický program si přede mnou není jistý — když mě něco chytne, zapnu hyperfocus a jdu do hloubky. V roce 2023 jsem absolvovala kurzy v Ateliéru Mozaika, v roce 2024 kurz Midjourney prakticky, v roce 2025 kurz Procreate a zavítala jsem i na brněnskou Brno Bold Typo konferenci. Ve volném čase se kromě kresby a malby věnuji také kaligrafii."
+        "S Photoshopem pracuji řadu let, editovala jsem ve Final Cut Pro a žádný grafický program si přede mnou není jistý — když mě něco chytne, zapnu hyperfocus a jdu do hloubky. V roce 2023 jsem absolvovala kurzy v Ateliéru Mozaika, v roce 2024 kurz Midjourney prakticky, v roce 2025 kurz Procreate a zavítala jsem i na brněnskou Brno Bold Typo konferenci. Ve volném čase se kromě kresby a malby věnuji také kaligrafii."
       ],
       about_quip: 'Žádný grafický program si přede mnou není jistý.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Nástroje', journey: 'Cesta',
@@ -129,7 +129,7 @@
       aboutParas: [
         "For twelve years my title said “test automation engineer / quality assurance.” But graphics were never a hobby on the side — they were part of every job I took on.",
         "At NetSuite I founded a coffee fundraiser and made its campaign video and posters. At Siemens I had an opportunity to shoot and edit video entry for the global hackathon. On my sabbatical I crafted paper, and made graphics for an open-source project.",
-        "I've worked in Photoshop for years, edited in Premiere Pro, and no graphics tool is safe around me — when something grabs me, I switch on hyperfocus and go deep. In 2023 I took courses at Ateliér Mozaika, in 2024 Midjourney in practice course, in 2025 a Procreate course, and went to the Brno Bold Typo conference. In my spare time I love drawing, painting and practicing calligraphy."
+        "I've worked in Photoshop for years, edited in Final Cut Pro, and no graphics tool is safe around me — when something grabs me, I switch on hyperfocus and go deep. In 2023 I took courses at Ateliér Mozaika, in 2024 Midjourney in practice course, in 2025 a Procreate course, and went to the Brno Bold Typo conference. In my spare time I love drawing, painting and practicing calligraphy."
       ],
       about_quip: 'No graphics tool is safe around me.',
       portrait_note: 'Ludmila Kellerová', toolkit: 'Toolkit', journey: 'The Journey',
@@ -166,8 +166,8 @@
   };
 
   const SKILLS = {
-    cz: ['Adobe Photoshop', 'Procreate for iPad', 'Premiere Pro', , 'Kresba & malba', 'Kaligrafie', 'Papírová tvorba', 'Střih videa'],
-    en: ['Adobe Photoshop', 'Procreate for iPad', 'Premiere Pro', 'Drawing & Painting', 'Calligraphy', 'Paper Craft', 'Video Editing']
+    cz: ['Adobe Photoshop', 'Procreate for iPad', 'Final Cut Pro', , 'Kresba & malba', 'Kaligrafie', 'Papírová tvorba', 'Střih videa'],
+    en: ['Adobe Photoshop', 'Procreate for iPad', 'Final Cut Pro', 'Drawing & Painting', 'Calligraphy', 'Paper Craft', 'Video Editing']
   };
 
   const contacts = (lang) => ([
