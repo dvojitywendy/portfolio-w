@@ -141,24 +141,26 @@
   const TIMELINE = {
     cz: [
       { year: '2011', text: 'Webové vizuály a loga — projekt Výuka jazyků.' },
+      { year: '2013', text: 'Ilustrace na obálku knihy Transfer znalostí a inovace.' },
       { year: '2017', text: 'Filmový příspěvek pro Siemens Global Hackathon — vítězný.' },
       { year: '2023', text: 'Absolvovala jsem 7 vícedenních kurzů kresby a malby v Ateliéru Mozaika.' },
       { year: '2023', text: 'Kávová sbírka v NetSuite — video a plakáty.' },
       { year: '2024', text: 'Absolvovala jsem kurz Midjourney prakticky.' },
       { year: '2024', text: 'Registrace v OOA-S s ohláškou ilustrace na obálce knihy.' },
       { year: '2025', text: 'Mentorka kurzů akrylové malby v NetSuite.' },
-      { year: '2025', text: 'Kurz Procreate (SKVOT).' },
+      { year: '2025', text: 'Absolvovala jsem Kurz Procreate (SKVOT).' },
       { year: '2026', text: 'Naplno se vydávám za grafickým designem.' }
     ],
     en: [
-      { year: '2011', text: 'First web visuals and logos — the Výuka jazyků project (Photoshop).' },
+      { year: '2011', text: 'Web visuals and logos — the Výuka jazyků project .' },
+      { year: '2013', text: 'Illustration for the book cover Transfer znalostí a inovace.' },
       { year: '2019', text: 'Film for the Siemens Global Hackathon — 1st prize.' },
       { year: '2023', text: 'Completed 7 multi-day drawing & painting courses at Ateliér Mozaika.' },
       { year: '2023', text: 'Office Coffee fundraiser at NetSuite — video and posters.' },
       { year: '2024', text: 'Completed Midjourney course.' },
       { year: '2024', text: 'Registered in OOA-S with a book cover illustration.' },
       { year: '2025', text: 'Mentored acrylic-painting courses at NetSuite.' },
-      { year: '2025', text: 'Procreate course (SKVOT).' },
+      { year: '2025', text: 'Completed Procreate course (SKVOT).' },
       { year: '2026', text: 'Going all in on graphic design.' }
     ]
   };
