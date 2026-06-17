@@ -140,28 +140,32 @@
 
   const TIMELINE = {
     cz: [
-      { year: '2011', text: 'První webové vizuály a loga — projekt Výuka jazyků (Photoshop).' },
-      { year: '2019', text: 'Film pro Siemens Global Hackathon — 1. místo.' },
-      { year: '2023', text: 'Absolvovala 7 vícedenních kurzů kresby a malby v Ateliéru Mozaika.' },
+      { year: '2011', text: 'Webové vizuály a loga — projekt Výuka jazyků.' },
+      { year: '2017', text: 'Filmový příspěvek pro Siemens Global Hackathon — vítězný.' },
+      { year: '2023', text: 'Absolvovala jsem 7 vícedenních kurzů kresby a malby v Ateliéru Mozaika.' },
       { year: '2023', text: 'Kávová sbírka v NetSuite — video a plakáty.' },
+      { year: '2024', text: 'Absolvovala jsem kurz Midjourney prakticky.' },
+      { year: '2024', text: 'Registrace v OOA-S s ohláškou ilustrace na obálce knihy.' },
       { year: '2025', text: 'Mentorka kurzů akrylové malby v NetSuite.' },
-      { year: '2025', text: 'Kurz Procreate (SKVOT) · Typo konference Brno.' },
+      { year: '2025', text: 'Kurz Procreate (SKVOT).' },
       { year: '2026', text: 'Naplno se vydávám za grafickým designem.' }
     ],
     en: [
       { year: '2011', text: 'First web visuals and logos — the Výuka jazyků project (Photoshop).' },
       { year: '2019', text: 'Film for the Siemens Global Hackathon — 1st prize.' },
       { year: '2023', text: 'Completed 7 multi-day drawing & painting courses at Ateliér Mozaika.' },
-      { year: '2023', text: 'Coffee fundraiser at NetSuite — video and posters.' },
+      { year: '2023', text: 'Office Coffee fundraiser at NetSuite — video and posters.' },
+      { year: '2024', text: 'Completed Midjourney course.' },
+      { year: '2024', text: 'Registered in OOA-S with a book cover illustration.' },
       { year: '2025', text: 'Mentored acrylic-painting courses at NetSuite.' },
-      { year: '2025', text: 'Procreate course (SKVOT) · Typo conference, Brno.' },
+      { year: '2025', text: 'Procreate course (SKVOT).' },
       { year: '2026', text: 'Going all in on graphic design.' }
     ]
   };
 
   const SKILLS = {
-    cz: ['Adobe Photoshop', 'Premiere Pro', 'Procreate', 'Kresba & malba', 'Typografie', 'Papírová tvorba', 'Střih videa'],
-    en: ['Adobe Photoshop', 'Premiere Pro', 'Procreate', 'Drawing & Painting', 'Typography', 'Paper Craft', 'Video Editing']
+    cz: ['Adobe Photoshop', 'Procreate for iPad', 'Premiere Pro', , 'Kresba & malba', 'Kaligrafie', 'Papírová tvorba', 'Střih videa'],
+    en: ['Adobe Photoshop', 'Procreate for iPad', 'Premiere Pro', 'Drawing & Painting', 'Calligraphy', 'Paper Craft', 'Video Editing']
   };
 
   const contacts = (lang) => ([
