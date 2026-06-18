@@ -23,6 +23,8 @@
         { f: 'assets/the-spark/02.png', cap: null },
         { f: 'assets/the-spark/06.png', cap: null },
         { f: 'assets/the-spark/05.png', cap: null },
+         { f: 'assets/the-spark/08.png', cap: { cz: 'Příspěvek do soutěže Tvořit svět po svém #TvořitSvětPoSvém', en: 'My admission for the contest Create your own world #TvořitSvětPoSvém' } },
+         { f: 'assets/the-spark/09.png', cap: { en: 'When you run out of coffee and all you find is a nettle tea', cz: 'Když vám dojde kafe a jediné co máte je kopřivový čaj' } },
         { f: 'assets/the-spark/07.png', cap: { en: 'Final project — the koi carps', cz: 'Závěrečný projekt — koi kapři' } }
       ],
       cover: 'assets/the-spark/07.png', video: null
