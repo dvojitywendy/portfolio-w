@@ -52,8 +52,8 @@
       medium: { en: 'Adobe Photoshop · Book cover illustration', cz: 'Adobe Photoshop · Ilustrace na obálku knihy' },
       title: { en: 'Book cover illustration', cz: 'Ilustrace na obálce' },
       desc: {
-        en: "In the beginning there was a book. And that book has its cover illustration missing and has a tight deadline. So I created one in Adobe Photoshop. And my university friend could publish the book the next day.",
-        cz: "Na počátku byla kniha. A té knize chyběl obrázek na obálku a měla šibeniční termín vydání. Tak jsem ji jeden vytvořila v Adobe Photoshop. A kamarádka z univerzity mohla druhý den vydávat."
+        en: "In the beginning there was a book and that book has its cover illustration missing. And has a tight deadline. So I created one for the book using Adobe Photoshop. And my university friend could publish the book the next day.",
+        cz: "Na počátku byla kniha a té knize chyběl obrázek na obálku. A měla šibeniční termín vydání. Tak jsem jí jeden vytvořila v Adobe Photoshop. A kamarádka z univerzity mohla druhý den vydávat."
       },
       images: [
         { f: 'assets/book-illustration/02.png', cap: null },
