@@ -47,6 +47,20 @@
       cover: 'assets/coffee-fundraiser/04.png',
       video: { src: 'assets/coffee-fundraiser/video.mp4', poster: 'assets/coffee-fundraiser/01.png', title: { en: 'The Campaign Video', cz: 'Video kampaně' } }
     },
+     {
+      slug: 'book-illustration', folder: 'book-illustration', year: '2013',
+      medium: { en: 'Adobe Photoshop · Book cover illustration', cz: 'Adobe Photoshop · Ilustrace na obálku knihy' },
+      title: { en: 'Book cover illustration', cz: 'Ilustrace na obálce' },
+      desc: {
+        en: "In the beginning there was a book. And that book has its cover illustration missing and has a tight deadline. So I created one in Adobe Photoshop. And my university friend could publish the book the next day.",
+        cz: "Na počátku byla kniha. A té knize chyběl obrázek na obálku a měla šibeniční termín vydání. Tak jsem ji jeden vytvořila v Adobe Photoshop. A kamarádka z univerzity mohla druhý den vydávat."
+      },
+      images: [
+        { f: 'assets/book-illustration/02.png', cap: null },
+        { f: 'assets/book-illustration/01.png', cap: null }
+      ],
+      cover: 'assets/book-illustration/01.png', video: null
+    },
     {
       slug: 'drawing-paintings', folder: 'drawing-paintings', year: '2021–25',
       medium: { en: 'Paper · Pencil · Acrylic · Ink · Watercolour', cz: 'Papír · Tužka · Akryl · Tuš · Akvarel' },
