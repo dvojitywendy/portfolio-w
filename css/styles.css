@@ -147,8 +147,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .video__title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(28px,5vw,72px);line-height:.9}
 .video__play{display:flex;align-items:center;gap:12px;font-family:'Space Mono',monospace;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;border:2px solid #fff;padding:12px 22px;transition:background .2s,color .2s}
 .video:hover .video__play{background:#fff;color:var(--ink)}
-.video__ratio{display:block;width:100%;aspect-ratio:16/9}
-.video video{position:relative;z-index:3;width:100%;aspect-ratio:16/9;object-fit:contain;display:block;background:var(--ink)}
+.video__ratio{display:block;width:100%;aspect-ratio:var(--video-ratio,16/9)}
+.video video{position:relative;z-index:3;width:100%;aspect-ratio:var(--video-ratio,16/9);object-fit:contain;display:block;background:var(--ink)}
+.video--portrait{max-width:420px;margin-left:auto;margin-right:auto}
 .video__note{font-family:'Space Mono',monospace;font-size:11px;color:var(--smoke);margin:-26px 0 40px}
 
 .gallery{columns:2;column-gap:18px}
