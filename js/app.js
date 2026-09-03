@@ -10,7 +10,7 @@
 
   const DATA = [
     {
-      slug: 'sportega-social', folder: 'sportega-social', year: '2026',
+      slug: 'sportega-social', folder: 'sportega-social', year: '2026', hidden: true,
       medium: { en: 'AI-assisted design · Instagram carousel & reel', cz: 'Design s AI asistencí · Instagram karusel & reel' },
       title: { en: 'Sportega — Assets for Socials', cz: 'Sportega — Podklady pro sociální sítě' },
       desc: {
@@ -290,7 +290,7 @@
   }
 
   function homeHtml(t) {
-    const featured = DATA.slice(0, 3);
+    const featured = DATA.filter((p) => !p.hidden).slice(0, 3);
     return `<main class="view">
       <section class="hero">
         <div class="hero__halftone" aria-hidden="true"></div>
@@ -337,7 +337,8 @@
   }
 
   function workHtml(t) {
-    const rows = DATA.map((p) => `
+    const visible = DATA.filter((p) => !p.hidden);
+    const rows = visible.map((p) => `
       <button class="row" data-open="${esc(p.slug)}">
         <div class="row__media"><img src="${esc(p.cover)}" alt="${esc(p.title[state.lang])}" loading="lazy" decoding="async"></div>
         <div class="row__body">
@@ -350,7 +351,7 @@
     return `<main class="work view">
       <div class="work__head">
         <h1>${esc(t.work_title)}</h1>
-        <span class="work__count">[ ${String(DATA.length).padStart(2, '0')} ]</span>
+        <span class="work__count">[ ${String(visible.length).padStart(2, '0')} ]</span>
       </div>
       <div class="work__list">${rows}</div>
     </main>`;
@@ -358,9 +359,10 @@
 
   function projectHtml(t, p) {
     const lang = state.lang;
-    const idx = DATA.indexOf(p);
-    const prev = DATA[(idx - 1 + DATA.length) % DATA.length];
-    const next = DATA[(idx + 1) % DATA.length];
+    const pagerList = DATA.filter((d) => !d.hidden || d === p);
+    const idx = pagerList.indexOf(p);
+    const prev = pagerList[(idx - 1 + pagerList.length) % pagerList.length];
+    const next = pagerList[(idx + 1) % pagerList.length];
 
     let videoBlock = '';
     if (p.video) {
