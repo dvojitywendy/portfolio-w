@@ -10,6 +10,23 @@
 
   const DATA = [
     {
+      slug: 'sportega-social', folder: 'sportega-social', year: '2026',
+      medium: { en: 'AI-assisted design · Instagram carousel & reel', cz: 'Design s AI asistencí · Instagram karusel & reel' },
+      title: { en: 'Sportega — Assets for Socials', cz: 'Sportega — Podklady pro sociální sítě' },
+      desc: {
+        en: "A social media set for Sportega's tennis rackets Wilson Defyer 98 PRO and 100: a 5-slide Instagram carousel and a reel. For the carousel I built a split-face concept — two players, two rackets, one court — comparing the 98 PRO and 100 side by side, then let it flow through specs, tech highlights and a closing CTA. AI (Claude) helped with the first sketch of the concept and the copy, which I then reworked by hand into my own visual direction and a punchier, more \"tennis\" voice. The reel was cut in CapCut from the supplied footage, building up the tempo toward a close.",
+        cz: "Sada pro sociální sítě k tenisovým raketám Wilson Defyer 98 PRO a 100 pro Sportegu: pětislajdový Instagram karusel a reel. U karuselu jsem postavila koncept rozděleného obličeje — dva hráči, dvě rakety, jeden kurt — porovnávající 98 PRO a 100 vedle sebe, a navázala specifikacemi, technologiemi a závěrečnou výzvou k akci. AI (Claude) mi pomohla s prvním nástřelem konceptu a textů, které jsem pak ručně přepracovala do vlastního vizuálu a „tenisovějšího“, chytlavějšího znění. Reel jsem sestříhala v CapCutu z dodaných záběrů a postupně v něm vygradovala tempo až k závěru."
+      },
+      images: [
+        { f: 'assets/sportega-social/carousel_01.jpg', cap: { en: 'Slide 1 — the hook: which side of the court are you?', cz: 'Slide 1 — hook: na které straně kurtu jsi ty?' } },
+        { f: 'assets/sportega-social/carousel_02.jpg', cap: { en: 'Slide 2 — Wilson Defyer 100 specs', cz: 'Slide 2 — specifikace Wilson Defyer 100' } },
+        { f: 'assets/sportega-social/carousel_03.jpg', cap: { en: 'Slide 3 — Wilson Defyer 98 PRO specs', cz: 'Slide 3 — specifikace Wilson Defyer 98 PRO' } },
+        { f: 'assets/sportega-social/carousel_04.jpg', cap: { en: 'Slide 4 — technology highlights', cz: 'Slide 4 — technologie rakety' } },
+        { f: 'assets/sportega-social/carousel_05.jpg', cap: { en: 'Slide 5 — closing CTA', cz: 'Slide 5 — závěrečná výzva k akci' } }
+      ],
+      cover: 'assets/sportega-social/carousel_01.jpg', video: null
+    },
+    {
       slug: 'the-spark', folder: 'the-spark', year: '2025',
       medium: { en: 'Procreate for iPad · Digital Painting', cz: 'Procreate for iPad · Digitální malba' },
       title: { en: 'The Spark', cz: 'Jiskra' },
