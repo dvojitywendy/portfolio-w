@@ -24,7 +24,8 @@
         { f: 'assets/sportega-social/carousel_04.jpg', cap: { en: 'Slide 4 — technology highlights', cz: 'Slide 4 — technologie rakety' } },
         { f: 'assets/sportega-social/carousel_05.jpg', cap: { en: 'Slide 5 — closing CTA', cz: 'Slide 5 — závěrečná výzva k akci' } }
       ],
-      cover: 'assets/sportega-social/carousel_01.jpg', video: null
+      cover: 'assets/sportega-social/carousel_01.jpg',
+      video: { src: 'assets/sportega-social/reel.mp4', poster: 'assets/sportega-social/reel-poster.jpg', title: { en: 'The Reel', cz: 'Reel' }, ratio: '9/16' }
     },
     {
       slug: 'the-spark', folder: 'the-spark', year: '2025',
@@ -364,7 +365,9 @@
     let videoBlock = '';
     if (p.video) {
       const posterImg = p.video.poster ? `<img class="video__poster" src="${esc(p.video.poster)}" alt="" aria-hidden="true">` : '';
-      videoBlock = `<div class="video" data-video-src="${esc(p.video.src)}" data-video-poster="${esc(p.video.poster)}" role="button" tabindex="0" aria-label="${esc(p.video.title[lang])}">
+      const portraitClass = p.video.ratio === '9/16' ? ' video--portrait' : '';
+      const ratioStyle = p.video.ratio ? ` style="--video-ratio:${esc(p.video.ratio)}"` : '';
+      videoBlock = `<div class="video${portraitClass}" data-video-src="${esc(p.video.src)}" data-video-poster="${esc(p.video.poster)}" role="button" tabindex="0" aria-label="${esc(p.video.title[lang])}"${ratioStyle}>
           ${posterImg}
           <div class="video__overlay">
             <div class="video__title">${txt(p.video.title[lang])}</div>
