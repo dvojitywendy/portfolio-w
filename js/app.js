@@ -15,8 +15,8 @@
       galleryCols: 3,
       title: { en: 'Selection Process — Assets for Socials', cz: 'Výběrové řízení - podklady pro sociální sítě' },
       desc: {
-        en: "A social media set for Sportega's tennis rackets Wilson Defyer 98 PRO and 100: a 5-slide Instagram carousel and a reel. The original idea for the split face was to lead the reader's eye right to left, like a ball in play, with the closing period standing in for the tennis ball — that needs more time to sink in than a carousel offers, so it's better suited to a poster. I reworked it into the split-face concept instead: two players, two rackets, one court — comparing the 98 PRO and 100 side by side, then let it flow through specs, tech highlights and a closing CTA. AI (Claude) helped with the first sketch of the concept and the copy, which I then reworked by hand into my own visual direction and a punchier, more \"tennis\" voice. The reel was cut in CapCut from the supplied footage, building up the tempo toward a close.",
-        cz: "Sada pro sociální sítě k tenisovým raketám Wilson Defyer 98 PRO a 100 pro Sportegu: pětislajdový Instagram carousel a reel. Původní nápad pro půlený obličej byl vést čtenářovy oči zprava doleva, jako míč při hře, přičemž tečka na konci znázorňuje tenisový míček — to by ale vyžadovalo delší čas na vstřebání konceptu, než carousel nabízí, takže je to vhodnější spíš pro plakát. Tento nápad jsem proto změnila ve split-face koncept: dva hráči, dvě rakety, jeden kurt — porovnávající 98 PRO a 100 vedle sebe — a navázala specifikacemi, technologiemi a závěrečnou výzvou k akci. AI (Claude) mi pomohla s prvním nástřelem konceptu a textů, které jsem pak ručně přepracovala do vlastního vizuálu a „tenisovějšího“, chytlavějšího znění. Reel jsem sestříhala v CapCutu z dodaných záběrů a postupně v něm vygradovala tempo až k závěru."
+        en: "A social media set for Sportega's tennis rackets Wilson Defyer 98 PRO and 100: a 5-slide Instagram carousel and a reel.\n\nThe original idea for the split face was to lead the reader's eye right to left, like a ball in play, with the closing period standing in for the tennis ball — that needs more time to sink in than a carousel offers, so I decided it was a better fit for a poster.\n\nI reworked it into the split-face concept instead: two players, two rackets, one court — comparing the 98 PRO and 100 side by side — then let it flow through specs, tech highlights and a closing CTA.\n\nAI (Claude) helped with the first sketch of the concept and the copy, which I then reworked by hand into my own visual direction and a punchier, more \"tennis\" voice.\n\nThe reel was cut in CapCut from the supplied footage, building up the tempo toward a close.",
+        cz: "Sada pro sociální sítě k tenisovým raketám Wilson Defyer 98 PRO a 100 pro Sportegu: pětislajdový Instagram carousel a reel.\n\nPůvodní nápad pro půlený obličej byl vést čtenářovy oči zprava doleva, jako míč při hře, přičemž tečka na konci znázorňuje tenisový míček — to by ale vyžadovalo delší čas na vstřebání konceptu, než carousel nabízí, takže jsem usoudila, že je to vhodnější nápad spíš pro plakát.\n\nTento nápad jsem proto změnila ve split-face koncept: dva hráči, dvě rakety, jeden kurt — porovnávající 98 PRO a 100 vedle sebe — a navázala specifikacemi, technologiemi a závěrečnou výzvou k akci.\n\nAI (Claude) mi pomohla s prvním nástřelem konceptu a textů, které jsem pak ručně přepracovala do vlastního vizuálu a „tenisovějšího“, chytlavějšího znění.\n\nReel jsem sestříhala v CapCutu z dodaných záběrů a postupně v něm vygradovala tempo až k závěru."
       },
       images: [
         { f: 'assets/sportega-social/carousel_01.jpg', cap: { en: 'Slide 1 — the hook: which side of the court are you?', cz: 'Slide 1 — hook: na které straně kurtu jsi ty?' } },
@@ -233,6 +233,10 @@
   }
   // escape + Czech non-breaking-space fix, for visible prose
   const txt = (s) => esc(czFix(s));
+  // split prose on blank lines into <p> paragraphs, each run through txt()
+  const paragraphsHtml = (s) => String(s == null ? '' : s)
+    .split(/\n\s*\n/).map((para) => para.trim()).filter(Boolean)
+    .map((para) => `<p>${txt(para)}</p>`).join('');
   // localize STR for the current language, with czFix applied to every string
   function localize(lang) {
     const src = STR[lang];
@@ -397,7 +401,7 @@
       <div class="project__head">
         <div class="project__meta">${esc(p.year)} — ${esc(p.medium[lang])}</div>
         <h1>${esc(p.title[lang])}</h1>
-        <p class="project__desc">${txt(p.desc[lang])}</p>
+        <div class="project__desc">${paragraphsHtml(p.desc[lang])}</div>
       </div>
       ${gallery}
       ${videoBlock}
