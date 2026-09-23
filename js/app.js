@@ -53,8 +53,8 @@
       medium: { en: 'Pixlr · MS Clickchamp · Poster & Film', cz: 'Pixlr · MS Clickchamp · Plakát & film' },
       title: { en: 'Office Coffee Fundraiser', cz: 'Kávová sbírka' },
       desc: {
-        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution. I edited the video and designed the posters. The Intelligentsia logo is the partner brand's; used only internally, non-commercially. For the video creation I used free video sequences and combined them with AI generated sequences in HeyGen. Video editing tool - MS Clickchamp, the rest of graphic work was done using Pixlr.",
-        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce. Sestříhala jsem video a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito pouze interně, nekomerčně. Pro tvrobu videa jsem použila volně dostupné video sekvence a AI generované video v HeyGen. Nástroj pro video editaci - MS Clickchamp, na zbylé grafické práce jsem použila Pixlr."
+        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution.\n\nI edited the video and designed the posters. The Intelligentsia logo is the partner brand's; used only internally, non-commercially. For the video creation I used free video sequences and combined them with AI generated sequences in HeyGen. Video editing tool - MS Clickchamp, the rest of graphic work was done using Pixlr.",
+        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce.\n\nSestříhala jsem video a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito pouze interně, nekomerčně. Pro tvrobu videa jsem použila volně dostupné video sekvence a AI generované video v HeyGen. Nástroj pro video editaci - MS Clickchamp, na zbylé grafické práce jsem použila Pixlr."
       },
       images: [
         { f: 'assets/coffee-fundraiser/01.png', cap: null },
@@ -119,8 +119,8 @@
       medium: { en: 'Final Cut Pro · Movie', cz: 'Final Cut Pro · Film' },
       title: { en: 'Hackathon Movie', cz: 'Film pro Hackathon' },
       desc: {
-        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Final Cut Pro, partially I touched up the script. The goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
-        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih ve Final Cut Pro, částečně jsem upravila i scénář. Cílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
+        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Final Cut Pro, partially I touched up the script.\n\nThe goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
+        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih ve Final Cut Pro, částečně jsem upravila i scénář.\n\nCílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
       },
       images: [],
       cover: 'assets/global-hackathon-2019/cover.jpg',
@@ -237,6 +237,14 @@
   const paragraphsHtml = (s) => String(s == null ? '' : s)
     .split(/\n\s*\n/).map((para) => para.trim()).filter(Boolean)
     .map((para) => `<p>${txt(para)}</p>`).join('');
+  // first paragraph only, for compact previews (Work list rows) — the first
+  // paragraph is written as a self-contained summary, so cutting there (rather
+  // than mid-paragraph) keeps card heights sane; an ellipsis signals there's
+  // more to read on the project page
+  const descPreview = (s) => {
+    const paras = String(s == null ? '' : s).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+    return paras.length > 1 ? `${paras[0]} …` : (paras[0] || '');
+  };
   // localize STR for the current language, with czFix applied to every string
   function localize(lang) {
     const src = STR[lang];
@@ -349,7 +357,7 @@
         <div class="row__body">
           <div class="row__meta">${esc(p.year)} — ${esc(p.medium[state.lang])}</div>
           <h2>${esc(p.title[state.lang])}</h2>
-          <p class="row__desc">${txt(p.desc[state.lang])}</p>
+          <p class="row__desc">${txt(descPreview(p.desc[state.lang]))}</p>
           <span class="row__cta">${esc(t.view_project)} →</span>
         </div>
       </button>`).join('');
