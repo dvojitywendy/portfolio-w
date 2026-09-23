@@ -119,8 +119,8 @@
       medium: { en: 'Final Cut Pro · Movie', cz: 'Final Cut Pro · Film' },
       title: { en: 'Hackathon Movie', cz: 'Film pro Hackathon' },
       desc: {
-        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Final Cut Pro, partially I touched up the script. The goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
-        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih ve Final Cut Pro, částečně jsem upravila i scénář. Cílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
+        en: "I made the film for our team at the Siemens Global Hackathon 2017: all the shooting, the edit in Final Cut Pro, partially I touched up the script.\n\nThe goal was showing how AI could help in Polarion ALM — and in our case with fatal consequences. We won 1st prize.",
+        cz: "Natočila jsem film pro náš tým na Siemens Global Hackathon 2017: veškeré natáčení, střih ve Final Cut Pro, částečně jsem upravila i scénář.\n\nCílem bylo ukázat, jak může AI v Polarion ALM pomoct - v našem případě s fatálními důsledky. Vyhráli jsme 1. místo."
       },
       images: [],
       cover: 'assets/global-hackathon-2019/cover.jpg',
