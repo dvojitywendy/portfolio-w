@@ -11,7 +11,7 @@
   const DATA = [
     {
       slug: 'sportega-social', folder: 'sportega-social', year: '2026',
-      medium: { en: 'AI-assisted design · Instagram carousel & reel', cz: 'Design s AI asistencí · Instagram carousel & reel' },
+      medium: { en: 'AI-assisted design · Claude AI · Procreate · CapCut', cz: 'Design s AI asistencí · Claude AI · Procreate · CapCut' },
       galleryCols: 3,
       title: { en: 'Selection Process — Assets for Socials', cz: 'Výběrové řízení - podklady pro sociální sítě' },
       desc: {
