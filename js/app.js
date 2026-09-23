@@ -53,8 +53,8 @@
       medium: { en: 'Pixlr · MS Clickchamp · Poster & Film', cz: 'Pixlr · MS Clickchamp · Plakát & film' },
       title: { en: 'Office Coffee Fundraiser', cz: 'Kávová sbírka' },
       desc: {
-        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution. I edited the video and designed the posters. The Intelligentsia logo is the partner brand's; used only internally, non-commercially. For the video creation I used free video sequences and combined them with AI generated sequences in HeyGen. Video editing tool - MS Clickchamp, the rest of graphic work was done using Pixlr.",
-        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce. Sestříhala jsem video a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito pouze interně, nekomerčně. Pro tvrobu videa jsem použila volně dostupné video sekvence a AI generované video v HeyGen. Nástroj pro video editaci - MS Clickchamp, na zbylé grafické práce jsem použila Pixlr."
+        en: "An unofficial fundraiser I founded at work — coffee, community, and a small revolution.\n\nI edited the video and designed the posters. The Intelligentsia logo is the partner brand's; used only internally, non-commercially. For the video creation I used free video sequences and combined them with AI generated sequences in HeyGen. Video editing tool - MS Clickchamp, the rest of graphic work was done using Pixlr.",
+        cz: "Neoficiální sbírka, kterou jsem ve firmě založila — káva, komunita a malá revoluce.\n\nSestříhala jsem video a navrhla plakáty. Logo Intelligentsia patří partnerské značce; použito pouze interně, nekomerčně. Pro tvrobu videa jsem použila volně dostupné video sekvence a AI generované video v HeyGen. Nástroj pro video editaci - MS Clickchamp, na zbylé grafické práce jsem použila Pixlr."
       },
       images: [
         { f: 'assets/coffee-fundraiser/01.png', cap: null },
