@@ -237,6 +237,14 @@
   const paragraphsHtml = (s) => String(s == null ? '' : s)
     .split(/\n\s*\n/).map((para) => para.trim()).filter(Boolean)
     .map((para) => `<p>${txt(para)}</p>`).join('');
+  // first paragraph only, for compact previews (Work list rows) — the first
+  // paragraph is written as a self-contained summary, so cutting there (rather
+  // than mid-paragraph) keeps card heights sane; an ellipsis signals there's
+  // more to read on the project page
+  const descPreview = (s) => {
+    const paras = String(s == null ? '' : s).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+    return paras.length > 1 ? `${paras[0]} …` : (paras[0] || '');
+  };
   // localize STR for the current language, with czFix applied to every string
   function localize(lang) {
     const src = STR[lang];
@@ -349,7 +357,7 @@
         <div class="row__body">
           <div class="row__meta">${esc(p.year)} — ${esc(p.medium[state.lang])}</div>
           <h2>${esc(p.title[state.lang])}</h2>
-          <p class="row__desc">${txt(p.desc[state.lang])}</p>
+          <p class="row__desc">${txt(descPreview(p.desc[state.lang]))}</p>
           <span class="row__cta">${esc(t.view_project)} →</span>
         </div>
       </button>`).join('');
