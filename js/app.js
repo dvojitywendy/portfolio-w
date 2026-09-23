@@ -13,7 +13,7 @@
       slug: 'sportega-social', folder: 'sportega-social', year: '2026', hidden: true,
       medium: { en: 'AI-assisted design · Instagram carousel & reel', cz: 'Design s AI asistencí · Instagram carousel & reel' },
       galleryCols: 3,
-      title: { en: 'Sportega — Assets for Socials', cz: 'Sportega — Podklady pro sociální sítě' },
+      title: { en: 'Selection Process — Assets for Socials', cz: 'Výběrové řízení - podklady pro sociální sítě' },
       desc: {
         en: "A social media set for Sportega's tennis rackets Wilson Defyer 98 PRO and 100: a 5-slide Instagram carousel and a reel. For the carousel I built a split-face concept — two players, two rackets, one court — comparing the 98 PRO and 100 side by side, then let it flow through specs, tech highlights and a closing CTA. AI (Claude) helped with the first sketch of the concept and the copy, which I then reworked by hand into my own visual direction and a punchier, more \"tennis\" voice. The reel was cut in CapCut from the supplied footage, building up the tempo toward a close.",
         cz: "Sada pro sociální sítě k tenisovým raketám Wilson Defyer 98 PRO a 100 pro Sportegu: pětislajdový Instagram carousel a reel. U carouselu jsem postavila koncept rozděleného obličeje — dva hráči, dvě rakety, jeden kurt — porovnávající 98 PRO a 100 vedle sebe, a navázala specifikacemi, technologiemi a závěrečnou výzvou k akci. AI (Claude) mi pomohla s prvním nástřelem konceptu a textů, které jsem pak ručně přepracovala do vlastního vizuálu a „tenisovějšího“, chytlavějšího znění. Reel jsem sestříhala v CapCutu z dodaných záběrů a postupně v něm vygradovala tempo až k závěru."
