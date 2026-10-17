@@ -10,7 +10,7 @@
 
   const DATA = [
     {
-      slug: 'mobilprovas-autumn', folder: 'mobilprovas-autumn', year: '2026', hidden: true,
+      slug: 'mobilprovas-autumn', folder: 'mobilprovas-autumn', year: '2026',
       medium: { en: 'AI-assisted design · Claude AI · CorelDRAW · Print & social', cz: 'Design s AI asistencí · Claude AI · CorelDRAW · Tisk & sociální sítě' },
       title: { en: 'Selection Process — Autumn Campaign', cz: 'Výběrové řízení - podzimní kampaň' },
       desc: {
