@@ -10,6 +10,24 @@
 
   const DATA = [
     {
+      slug: 'mobilprovas-autumn', folder: 'mobilprovas-autumn', year: '2026',
+      medium: { en: 'CorelDRAW · Print & social media', cz: 'CorelDRAW · Tisk & sociální sítě' },
+      title: { en: 'Mobil pro vás — Autumn Campaign', cz: 'Mobil pro vás — Podzimní kampaň' },
+      desc: {
+        en: "An autumn campaign for Mobil pro vás: a 200 CZK discount on protective cases and tempered glass for phones, watches and cameras, valid in brick-and-mortar stores from 1 October to 30 November 2026. Headline: \"Autumn is rough — not just on phones.\"\n\nThe set covers an A1 in-store poster, a round sticker for shop windows and counters, and a two-slide Instagram carousel.\n\nThe carousel opens with an animated slide — \"Me in October vs. my phone\": me in a hat, scarf, coat, sweater, thermals and gloves, while the phone stands there naked — with the call to action \"Dress it up too →\". The second slide comes in two versions: one with a bundled-up little phone character in the snow, one with a clean type-only layout.\n\nThe poster went through a few iterations — the earlier version with an orange price is at the end of the gallery; the final one switched to gold, which carries across the whole set.",
+        cz: "Podzimní kampaň pro Mobil pro vás: sleva 200 Kč na ochranná pouzdra a tvrzená skla pro mobily, hodinky a foťáky, platná v kamenných prodejnách od 1. 10. do 30. 11. 2026. Hlavní claim: „Podzim je drsný nejen na telefony.“\n\nSada obsahuje plakát A1 do prodejen, kulatou samolepku na výlohy a pulty a dvouslajdový Instagram carousel.\n\nCarousel otevírá animovaný slajd „Já v říjnu vs. můj telefon“: já v čepici, šále, kabátě, svetru, termoprádle a rukavicích, telefon nahý — s výzvou „Obleč ho taky →“. Druhý slajd existuje ve dvou verzích: s nabaleným telefonkem ve sněhu a čistě typografická.\n\nPlakát prošel několika iteracemi — dřívější verze s oranžovou cenou je na konci galerie; finální přešla na zlatou, která se pak táhne celou sadou."
+      },
+      images: [
+        { f: 'assets/mobilprovas-autumn/poster-a1.jpg', cap: { en: 'A1 in-store poster — final', cz: 'Plakát A1 do prodejen — finální verze' } },
+        { f: 'assets/mobilprovas-autumn/sticker.jpg', cap: { en: 'Round sticker for shop windows and counters', cz: 'Kulatá samolepka na výlohy a pulty' } },
+        { f: 'assets/mobilprovas-autumn/ig-slide2-a.jpg', cap: { en: 'Instagram slide 2 — version A', cz: 'Instagram slajd 2 — verze A' } },
+        { f: 'assets/mobilprovas-autumn/ig-slide2-b.jpg', cap: { en: 'Instagram slide 2 — version B', cz: 'Instagram slajd 2 — verze B' } },
+        { f: 'assets/mobilprovas-autumn/poster-a1-draft.jpg', cap: { en: 'Earlier poster iteration — orange price', cz: 'Dřívější iterace plakátu — oranžová cena' } }
+      ],
+      cover: 'assets/mobilprovas-autumn/poster-a1.jpg',
+      video: { src: 'assets/mobilprovas-autumn/ig-slide1.mp4', poster: 'assets/mobilprovas-autumn/ig-slide1-poster.jpg', title: { en: 'Animated slide', cz: 'Animovaný slajd' }, ratio: '3/4' }
+    },
+    {
       slug: 'sportega-social', folder: 'sportega-social', year: '2026',
       medium: { en: 'AI-assisted design · Claude AI · Procreate · CapCut', cz: 'Design s AI asistencí · Claude AI · Procreate · CapCut' },
       galleryCols: 3,
@@ -380,7 +398,8 @@
     let videoBlock = '';
     if (p.video) {
       const posterImg = p.video.poster ? `<img class="video__poster" src="${esc(p.video.poster)}" alt="" aria-hidden="true">` : '';
-      const portraitClass = p.video.ratio === '9/16' ? ' video--portrait' : '';
+      const ratioParts = String(p.video.ratio || '').split('/').map(Number);
+      const portraitClass = ratioParts.length === 2 && ratioParts[0] < ratioParts[1] ? ' video--portrait' : '';
       const ratioStyle = p.video.ratio ? ` style="--video-ratio:${esc(p.video.ratio)}"` : '';
       videoBlock = `<div class="video${portraitClass}" data-video-src="${esc(p.video.src)}" data-video-poster="${esc(p.video.poster)}" role="button" tabindex="0" aria-label="${esc(p.video.title[lang])}"${ratioStyle}>
           ${posterImg}
