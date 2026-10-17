@@ -20,12 +20,20 @@
       images: [
         { f: 'assets/mobilprovas-autumn/poster-a1.jpg', cap: { en: 'A1 in-store poster — final', cz: 'Plakát A1 do prodejen — finální verze' } },
         { f: 'assets/mobilprovas-autumn/sticker.jpg', cap: { en: 'Round sticker for shop windows and counters', cz: 'Kulatá samolepka na výlohy a pulty' } },
-        { f: 'assets/mobilprovas-autumn/ig-slide2-a.jpg', cap: { en: 'Instagram slide 2 — version A', cz: 'Instagram slajd 2 — verze A' } },
-        { f: 'assets/mobilprovas-autumn/ig-slide2-b.jpg', cap: { en: 'Instagram slide 2 — version B', cz: 'Instagram slajd 2 — verze B' } },
         { f: 'assets/mobilprovas-autumn/poster-a1-draft.jpg', cap: { en: 'Earlier poster iteration — orange price', cz: 'Dřívější iterace plakátu — oranžová cena' } }
       ],
       cover: 'assets/mobilprovas-autumn/poster-a1.jpg',
-      video: { src: 'assets/mobilprovas-autumn/ig-slide1.mp4', poster: 'assets/mobilprovas-autumn/ig-slide1-poster.jpg', title: { en: 'Animated slide', cz: 'Animovaný slajd' }, ratio: '3/4' }
+      carousels: [
+        { label: { en: 'Instagram carousel — version A', cz: 'Instagram carousel — verze A' }, slides: [
+          { video: 'assets/mobilprovas-autumn/ig-slide1.mp4', poster: 'assets/mobilprovas-autumn/ig-slide1-poster.jpg' },
+          { f: 'assets/mobilprovas-autumn/ig-slide2-a.jpg' }
+        ] },
+        { label: { en: 'Instagram carousel — version B', cz: 'Instagram carousel — verze B' }, slides: [
+          { video: 'assets/mobilprovas-autumn/ig-slide1.mp4', poster: 'assets/mobilprovas-autumn/ig-slide1-poster.jpg' },
+          { f: 'assets/mobilprovas-autumn/ig-slide2-b.jpg' }
+        ] }
+      ],
+      video: null
     },
     {
       slug: 'sportega-social', folder: 'sportega-social', year: '2026',
@@ -423,6 +431,20 @@
         }).join('')}
       </div>` : '';
 
+    // Instagram-style carousels: slides of one post shown side by side.
+    // Video slides loop silently like in the feed; image slides open the lightbox.
+    const carousels = (p.carousels || []).map((c) => `
+      <figure class="carousel">
+        <div class="carousel__track" style="--slides:${c.slides.length}">
+          ${c.slides.map((sl, i) => sl.video
+            ? `<div class="carousel__slide"><video src="${esc(sl.video)}" poster="${esc(sl.poster || '')}" autoplay muted loop playsinline preload="metadata" aria-label="${esc(c.label[lang])} — ${i + 1}/${c.slides.length}"></video></div>`
+            : `<button class="carousel__slide" data-lb-src="${esc(sl.f)}" data-lb-cap="${esc(c.label[lang])} — ${i + 1}/${c.slides.length}"><img src="${esc(sl.f)}" alt="${esc(c.label[lang])} — ${i + 1}/${c.slides.length}" loading="lazy" decoding="async"></button>`
+          ).join('')}
+        </div>
+        <figcaption class="carousel__cap">${esc(c.label[lang])}<span class="carousel__dots" aria-hidden="true">${c.slides.map(() => '<i></i>').join('')}</span></figcaption>
+      </figure>`).join('');
+    const carouselBlock = carousels ? `<div class="carousels">${carousels}</div>` : '';
+
     return `<main class="project view">
       <button class="project__back" data-go="#/work">← ${esc(t.back)}</button>
       <div class="project__head">
@@ -430,6 +452,7 @@
         <h1>${esc(p.title[lang])}</h1>
         <div class="project__desc">${paragraphsHtml(p.desc[lang])}</div>
       </div>
+      ${carouselBlock}
       ${gallery}
       ${videoBlock}
       <div class="pager">
@@ -565,6 +588,11 @@
         el.addEventListener('click', () => {
           const im = activeProject.images[+el.getAttribute('data-lb')];
           state.lb = { src: im.f, caption: im.cap ? im.cap[state.lang] : '' };
+          render();
+        }));
+      root.querySelectorAll('[data-lb-src]').forEach((el) =>
+        el.addEventListener('click', () => {
+          state.lb = { src: el.getAttribute('data-lb-src'), caption: el.getAttribute('data-lb-cap') || '' };
           render();
         }));
     }
