@@ -10,7 +10,7 @@
 
   const DATA = [
     {
-      slug: 'motion-graphics', folder: 'motion-graphics', year: '2025–26', hidden: true,
+      slug: 'motion-graphics', folder: 'motion-graphics', year: '2025–26',
       medium: { en: 'Procreate for iPad · Animation Assist · Motion study', cz: 'Procreate for iPad · Animation Assist · Studie pohybu' },
       galleryCols: 2,
       title: { en: 'Motion Graphics — Loops & Studies', cz: 'Motion grafika — smyčky & studie' },
