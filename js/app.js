@@ -10,6 +10,22 @@
 
   const DATA = [
     {
+      slug: 'motion-graphics', folder: 'motion-graphics', year: '2025–26',
+      medium: { en: 'Procreate for iPad · Animation Assist · Motion study', cz: 'Procreate for iPad · Animation Assist · Studie pohybu' },
+      galleryCols: 2,
+      title: { en: 'Motion Graphics — Loops & Studies', cz: 'Motion grafika — smyčky & studie' },
+      desc: {
+        en: "A small set of short animation loops — practicing motion, not just static illustration.\n\nThe dragon-over-the-mountains clip is homework from the same Procreate course (SKVOT Czech, April 2025) behind The Spark — this exercise was about Procreate's Animation Assist tool rather than painting: getting a creature to breathe and the scene to drift, in a tight few-frame loop.\n\nThe Derpy clip is a fan-art motion study: recoloring and re-texturing a tiger character from the very end of K-Pop Demon Hunters, keeping its proportions and movement almost exact to practice animating an existing design rather than my own. Derpy and K-Pop Demon Hunters are © Sony Pictures Animation / Netflix — I don't own the character, only this animation study of it.",
+        cz: "Malá sada krátkých animačních smyček — tentokrát šlo o pohyb, ne o statickou ilustraci.\n\nKlip s drakem nad horami je domácí úkol ze stejného kurzu Procreate (SKVOT Czech, duben 2025), ze kterého vzešla i Jiskra — tahle část kurzu se ale věnovala nástroji Animation Assist místo malby: naučit postavičku dýchat a scénu se jemně hýbat, v krátké smyčce o pár snímcích.\n\nKlip s Derpy je fanouškovská studie pohybu: překreslila jsem barvy a texturu tygra z úplného konce filmu K-Pop Demon Hunters, ale proporce a pohyb jsem zachovala skoro přesně — šlo o trénink animace existující postavy, ne vlastního designu. Derpy i K-Pop Demon Hunters jsou © Sony Pictures Animation / Netflix — nevlastním postavu, jen tuhle animační studii."
+      },
+      images: [
+        { video: 'assets/motion-graphics/dragon-loop.mp4', poster: 'assets/motion-graphics/dragon-loop-poster.jpg', cap: { en: 'Procreate Animation Assist homework — motion loop (SKVOT course, April 2025)', cz: 'Domácí úkol s Animation Assist — smyčka pohybu (kurz SKVOT, duben 2025)' } },
+        { video: 'assets/motion-graphics/derpy.mp4', poster: 'assets/motion-graphics/derpy-poster.jpg', cap: { en: 'Motion study – Derpy (K-Pop Demon Hunters, © Sony Pictures Animation / Netflix)', cz: 'Studie pohybu – Derpy (K-Pop Demon Hunters, © Sony Pictures Animation / Netflix)' } }
+      ],
+      cover: 'assets/motion-graphics/dragon-loop-poster.jpg',
+      video: null
+    },
+    {
       slug: 'mobilprovas-autumn', folder: 'mobilprovas-autumn', year: '2026',
       medium: { en: 'AI-assisted design · Claude AI · CorelDRAW · Print & social', cz: 'Design s AI asistencí · Claude AI · CorelDRAW · Tisk & sociální sítě' },
       title: { en: 'Selection Process — Autumn Campaign', cz: 'Výběrové řízení - podzimní kampaň' },
@@ -424,6 +440,12 @@
     const gallery = p.images.length ? `<div class="gallery${galleryClass}"${galleryStyle}>
         ${p.images.map((im, i) => {
           const cap = im.cap ? im.cap[lang] : '';
+          if (im.video) {
+            return `<div class="shot shot--video">
+              <video src="${esc(im.video)}" poster="${esc(im.poster || '')}" autoplay muted loop playsinline preload="metadata" aria-label="${esc(cap || p.title[lang])}"></video>
+              ${cap ? `<div class="shot__cap">${esc(cap)}</div>` : ''}
+            </div>`;
+          }
           return `<button class="shot" data-lb="${i}">
             <img src="${esc(im.f)}" alt="${esc(cap || p.title[lang])}" loading="lazy" decoding="async">
             ${cap ? `<div class="shot__cap">${esc(cap)}</div>` : ''}
