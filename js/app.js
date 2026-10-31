@@ -424,6 +424,12 @@
     const gallery = p.images.length ? `<div class="gallery${galleryClass}"${galleryStyle}>
         ${p.images.map((im, i) => {
           const cap = im.cap ? im.cap[lang] : '';
+          if (im.video) {
+            return `<div class="shot shot--video">
+              <video src="${esc(im.video)}" poster="${esc(im.poster || '')}" autoplay muted loop playsinline preload="metadata" aria-label="${esc(cap || p.title[lang])}"></video>
+              ${cap ? `<div class="shot__cap">${esc(cap)}</div>` : ''}
+            </div>`;
+          }
           return `<button class="shot" data-lb="${i}">
             <img src="${esc(im.f)}" alt="${esc(cap || p.title[lang])}" loading="lazy" decoding="async">
             ${cap ? `<div class="shot__cap">${esc(cap)}</div>` : ''}
